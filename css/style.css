@@ -24,6 +24,7 @@
 body {
      font-family: 'Roboto', sans-serif;
      color: black;
+     user-select: none;
 }
 
 
@@ -55,19 +56,18 @@ footer {
      width: 400px;
      padding: 40px;
      flex-flow: column nowrap;
-
 }
 
 #display {
-     flex: 1;
-     height: 75px;
+     height: 70px;
      background: white;
      margin-bottom: 20px;
      text-align: right;     
      font-size: 36px;
-     line-height: 75px;
+     line-height: 70px;
      padding-right: 10px;
-     overflow: visible;  /* need to fix this. It flows to the right currently*/
+     overflow: hidden;  /* need to fix this. It flows to the right currently*/
+     user-select: text;
 }
 
 #pad {
@@ -75,6 +75,7 @@ footer {
      flex-flow: column nowrap;
      flex: 5;
      justify-content: space-around;
+     
 }
 
 .row {
@@ -95,4 +96,10 @@ footer {
      align-items: center;
      text-align: center;
      line-height: 60px;
+}
+
+.num:hover {
+     /* color: blue; */
+     background: orange;
+     cursor: default;
 }
